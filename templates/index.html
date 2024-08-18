@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Predict Your Admission Chances</h1>
+            <form action="/predict" method="post">
+                <div class="input-group">
+                    <label for="gre">GRE Score:</label>
+                    <input type="text" id="gre" name="gre" required>
+                </div>
+                <div class="input-group">
+                    <label for="toefl">TOEFL Score:</label>
+                    <input type="text" id="toefl" name="toefl" required>
+                </div>
+                <div class="input-group">
+                    <label for="university_rating">University Rating:</label>
+                    <input type="text" id="university_rating" name="university_rating" required>
+                </div>
+                <div class="input-group">
+                    <label for="sop">SOP:</label>
+                    <input type="text" id="sop" name="sop" required>
+                </div>
+                <div class="input-group">
+                    <label for="lor">LOR:</label>
+                    <input type="text" id="lor" name="lor" required>
+                </div>
+                <div class="input-group">
+                    <label for="cgpa">CGPA:</label>
+                    <input type="text" id="cgpa" name="cgpa" required>
+                </div>
+                <div class="input-group">
+                    <label for="research">Research (0 or 1):</label>
+                    <input type="text" id="research" name="research" required>
+                </div>
+                <div class="input-group">
+                    <input type="submit" value="Predict">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
